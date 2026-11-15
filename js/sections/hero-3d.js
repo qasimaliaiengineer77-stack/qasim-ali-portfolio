@@ -42,7 +42,7 @@ export function initHero3D() {
     const loader = new THREE.TextureLoader();
 
     loader.load(
-        "/assets/images/profile.jpeg.jpeg",
+        "./assets/images/profile.jpeg.jpeg",
         (texture) => {
             texture.colorSpace = THREE.SRGBColorSpace;
             texture.minFilter = THREE.LinearMipmapLinearFilter;
