@@ -1,0 +1,253 @@
+﻿/* ABOUT SECTION */
+
+.about-section {
+    position: relative;
+    width: 100%;
+    padding: 55px 8%;
+    background: #080808;
+    border-top: 1px solid rgba(0, 229, 255, 0.35);
+    overflow: hidden;
+}
+
+.about-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* TOP LABELS */
+
+.about-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 38px;
+    font-family: monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.about-number {
+    color: #00e5ff;
+    text-align: left;
+}
+
+.about-category {
+    color: #687780;
+    text-align: right;
+}
+
+/* MAIN CONTENT */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 0.8fr 1.5fr;
+    gap: 55px;
+    align-items: start;
+}
+
+.about-heading h2 {
+    font-size: clamp(38px, 5vw, 65px);
+    line-height: 1.05;
+    color: #ffffff;
+    letter-spacing: -2px;
+}
+
+.about-heading h2 span {
+    color: #00e5ff;
+}
+
+.about-heading-line {
+    width: 42px;
+    height: 2px;
+    margin-top: 25px;
+    background: #00e5ff;
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.5);
+}
+
+.about-subtitle {
+    display: block;
+    margin-top: 15px;
+    color: #687780;
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* PROFESSIONAL INTRODUCTION */
+
+.about-description {
+    max-width: 720px;
+}
+
+.about-description h3 {
+    margin-bottom: 22px;
+    color: #ffffff;
+    font-size: clamp(25px, 3vw, 38px);
+    line-height: 1.3;
+}
+
+.about-description h3 span {
+    color: #00e5ff;
+}
+
+.about-description p {
+    margin-top: 15px;
+    color: #a5a5a5;
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+/* ANIMATED WAVEFORM */
+
+.about-visual {
+    position: relative;
+    margin-top: 42px;
+    padding: 12px 0;
+    border: none;
+}
+
+.about-visual::before,
+.about-visual::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 75px;
+    height: 1px;
+    background: #00e5ff;
+    box-shadow: 0 0 8px rgba(0, 229, 255, 0.5);
+}
+
+.about-visual::before {
+    top: 0;
+}
+
+.about-visual::after {
+    bottom: 0;
+}
+
+.about-visual-label,
+.about-visual-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    color: #71858d;
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.about-visual-label span:first-child {
+    color: #00e5ff;
+}
+
+.about-visual-status {
+    color: #00e5a0;
+}
+
+.about-wave {
+    height: 42px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3px;
+    overflow: hidden;
+}
+
+.about-wave span {
+    flex: 1;
+    min-width: 2px;
+    height: 24px;
+    max-height: 38px;
+    border-radius: 3px;
+    background: linear-gradient(
+        to top,
+        rgba(0, 229, 255, 0.15),
+        #00e5ff
+    );
+    opacity: 0.65;
+    transform-origin: center;
+    animation: aboutWaveMotion 1.1s ease-in-out infinite alternate;
+    animation-delay: calc(var(--bar) * -0.075s);
+}
+
+@keyframes aboutWaveMotion {
+    from {
+        transform: scaleY(0.35);
+        opacity: 0.35;
+    }
+
+    to {
+        transform: scaleY(1);
+        opacity: 0.9;
+    }
+}
+
+.about-visual-footer {
+    justify-content: flex-start;
+    color: #a5a5a5;
+}
+
+.about-visual-footer span {
+    color: #00e5ff;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .about-section {
+        padding: 45px 6%;
+    }
+
+    .about-top {
+        margin-bottom: 32px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-visual {
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 38px 5%;
+    }
+
+    .about-top {
+        margin-bottom: 28px;
+        font-size: 9px;
+    }
+
+    .about-description p {
+        font-size: 14px;
+    }
+
+    .about-wave {
+        height: 36px;
+        gap: 3px;
+    }
+
+    .about-visual-footer {
+        font-size: 8px;
+        gap: 7px;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    .about-wave span {
+        animation: none;
+        transform: scaleY(0.65);
+    }
+}

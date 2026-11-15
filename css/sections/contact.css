@@ -1,0 +1,322 @@
+﻿/* CONTACT SECTION */
+
+.contact-section {
+    position: relative;
+    width: 100%;
+    padding: 42px 8% 60px;
+    background: #080808;
+    color: #ffffff;
+    border-top: 1px solid rgba(70, 210, 255, 0.35);
+    overflow: hidden;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.contact-heading {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.contact-label,
+.contact-kicker {
+    display: block;
+    color: #00e5ff;
+    font: 11px monospace;
+    letter-spacing: 2px;
+}
+
+.contact-label {
+    margin-bottom: 18px;
+}
+
+.contact-heading h2 {
+    color: #ffffff;
+    font-size: clamp(38px, 5vw, 65px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -2px;
+}
+
+.contact-heading > p {
+    max-width: 650px;
+    margin: 16px auto 0;
+    color: #a5a5a5;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.contact-heading-line {
+    display: block;
+    width: 40px;
+    height: 2px;
+    margin: 20px auto 0;
+    background: #00e5ff;
+    box-shadow: 0 0 12px rgba(0, 229, 255, 0.5);
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.contact-intro {
+    max-width: 440px;
+    transform: perspective(900px) translateZ(0);
+    transition: transform 0.35s ease;
+}
+
+.contact-intro:hover {
+    transform: perspective(900px) translateZ(10px) rotateY(1deg);
+}
+
+.contact-intro h3 {
+    margin-top: 22px;
+    color: #ffffff;
+    font-size: clamp(25px, 3vw, 36px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.contact-intro > p {
+    max-width: 390px;
+    margin-top: 16px;
+    color: #9ba9ad;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.contact-availability {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 28px;
+    color: #91a5aa;
+    font: 10px monospace;
+    letter-spacing: 1px;
+}
+
+.contact-availability > span {
+    width: 7px;
+    height: 7px;
+    flex: 0 0 7px;
+    border-radius: 50%;
+    background: #00e5a0;
+    box-shadow: 0 0 10px rgba(0, 229, 160, 0.65);
+}
+
+.contact-directory > .contact-kicker {
+    margin-bottom: 25px;
+}
+
+.contact-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 28px;
+    row-gap: 28px;
+}
+
+.contact-link {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    gap: 12px;
+    padding: 5px 2px;
+    color: #ffffff;
+    text-decoration: none;
+    transform: perspective(700px) translateZ(0);
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+.contact-link:hover {
+    transform: perspective(700px) translateZ(13px) rotateY(-3deg);
+}
+
+.contact-link > svg {
+    width: 23px;
+    height: 23px;
+    flex: 0 0 23px;
+    fill: none;
+    stroke: #00e5ff;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 0 5px rgba(0, 229, 255, 0.15));
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.contact-link:nth-child(4) > svg {
+    stroke: #25d366;
+}
+
+.contact-link:hover > svg {
+    transform: translateZ(8px) scale(1.12);
+    filter: drop-shadow(0 0 9px rgba(0, 229, 255, 0.7));
+}
+
+.contact-link > span:nth-child(2) {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contact-link strong {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.contact-link small {
+    color: #89999e;
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.contact-link:hover strong {
+    color: #00e5ff;
+    text-shadow: 0 0 12px rgba(0, 229, 255, 0.35);
+}
+
+.contact-arrow {
+    color: #00e5ff;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.contact-link:hover .contact-arrow {
+    transform: translate(3px, -3px);
+}
+
+.contact-closing {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 52px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 229, 255, 0.16);
+    color: #71868c;
+    font: 9px monospace;
+    letter-spacing: 1.4px;
+}
+
+.contact-closing span:nth-child(even) {
+    color: #00e5ff;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .contact-section {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+    .contact-intro {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 38px 5% 48px;
+    }
+
+    .contact-heading {
+        margin-bottom: 32px;
+    }
+
+    .contact-label,
+    .contact-kicker {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+    .contact-heading h2 {
+        font-size: clamp(34px, 8vw, 44px);
+        letter-spacing: -1.5px;
+    }
+
+    .contact-heading > p {
+        font-size: 12px;
+    }
+
+    .contact-content {
+        gap: 34px;
+    }
+
+    .contact-intro h3 {
+        font-size: clamp(24px, 6vw, 30px);
+    }
+
+    .contact-links {
+        column-gap: 14px;
+        row-gap: 24px;
+    }
+
+    .contact-link {
+        gap: 8px;
+    }
+
+    .contact-link > svg {
+        width: 20px;
+        height: 20px;
+        flex-basis: 20px;
+    }
+
+    .contact-link strong {
+        font-size: 12px;
+    }
+
+    .contact-link small {
+        font-size: 9px;
+    }
+
+    .contact-arrow {
+        font-size: 13px;
+    }
+
+    .contact-closing {
+        margin-top: 38px;
+        font-size: 8px;
+        letter-spacing: 0.8px;
+    }
+}
+
+@media (max-width: 360px) {
+    .contact-links {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contact-intro,
+    .contact-link,
+    .contact-link > svg,
+    .contact-link strong,
+    .contact-arrow {
+        transition: none;
+    }
+
+    .contact-intro:hover,
+    .contact-link:hover,
+    .contact-link:hover > svg {
+        transform: none;
+    }
+}
